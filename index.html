@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GCTU Law Firm</title>
+    <style>
+        /* Reset and base styles */
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        a {
+            color: #004080;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Header */
+        
+        header {
+            background-color: #00264d;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        
+        nav li {
+            font-weight: 600;
+        }
+        /* Hero Section */
+        
+        .hero {
+            background: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+        /* Main Content */
+        
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            margin-bottom: 50px;
+        }
+        
+        h3 {
+            color: #00264d;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #004080;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        /* Practice Areas */
+        
+        .practice-areas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .practice-area {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .practice-area:hover {
+            box-shadow: 0 0 15px rgba(0, 64, 128, 0.3);
+        }
+        /* Attorney Profile */
+        
+        .attorney-profile {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .attorney-main {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 20px;
+        }
+        
+        .attorney-main img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        
+        .attorney-main h4 {
+            margin-bottom: 10px;
+            color: #004080;
+            font-size: 1.5rem;
+        }
+        
+        .attorney-main .bio {
+            font-size: 0.95rem;
+            color: #555;
+            text-align: left;
+        }
+        /* Contact Form */
+        
+        form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #00264d;
+        }
+        
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            resize: vertical;
+        }
+        
+        form button {
+            background-color: #004080;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        form button:hover {
+            background-color: #00264d;
+        }
+        /* Footer */
+        
+        footer {
+            background-color: #00264d;
+            color: white;
+            text-align: center;
+            padding: 20px 40px;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: #66b2ff;
+            margin: 0 10px;
+        }
+        /* Responsive */
+        
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
+            .attorney-profile {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>GCTU Law Firm</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#practice">Practice Areas</a></li>
+                <li><a href="#attorney">Attorney</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Expert Legal Guidance from GCTU</h2>
+        <p>Dedicated to protecting your rights with integrity, experience, and personalized service.</p>
+    </section>
+
+    <main>
+        <section id="about">
+            <h3>About the Firm</h3>
+            <p>GCTU Law Firm provides comprehensive legal services tailored to your needs. With a focus on client satisfaction and ethical practice, we handle cases with precision and compassion. Serving the community for over 15 years, we are committed
+                to achieving justice for every client.</p>
+        </section>
+
+        <section id="practice">
+            <h3>Practice Areas</h3>
+            <div class="practice-areas">
+                <div class="practice-area">
+                    <h4>Family Law</h4>
+                    <p>Divorce, child custody, adoption, and domestic relations with empathetic support.</p>
+                </div>
+                <div class="practice-area">
+                    <h4>Criminal Defense</h4>
+                    <p>Vigorous representation in criminal matters to safeguard your freedom.</p>
+                </div>
+                <div class="practice-area">
+                    <h4>Personal Injury</h4>
+                    <p>Securing compensation for injuries caused by negligence or accidents.</p>
+                </div>
+                <div class="practice-area">
+                    <h4>Business Law</h4>
+                    <p>Contracts, litigation, and advisory services for small businesses and entrepreneurs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="attorney">
+            <h3>Meet GCTU</h3>
+            <div class="attorney-profile">
+                <div class="attorney-main">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Peter Larbi" />
+                    <h4>GCTU, Esq.</h4>
+                    <div class="bio">
+                        <p>GCTU treats every case as if it were his own.</p>
+                        <p><strong>Admitted to:</strong> State Bar of [Your State]</p>
+                        <p><strong>Contact:</strong> (555) 123-4567 | GC@TUlaw.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h3>Contact GCTU Law Firm</h3>
+            <form action="#" method="POST">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required />
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone number" />
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="How can GCTU assist you?" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 GCTU Law Firm |P.M.B. 100, Accra North, Accra (Tesano)</p>
+        <p>Phone: 050 133 1676 | Email: info@gctu.edu.gh</p>
+        <p>
+            <a href="#" aria-label="Facebook">Facebook</a> |
+            <a href="#" aria-label="LinkedIn">LinkedIn</a> |
+            <a href="#" aria-label="Twitter">Twitter</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
